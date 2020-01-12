@@ -1,0 +1,71 @@
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<div class="text-center">
+    <h1 class="display-4">রেজিস্ট্রেশন</h1>
+    <div class="card">
+        <div class="card-body">
+            <form class="text-center float-left" method="POST">
+                <table>
+                    <tr>
+                        <td>
+                            <label>নাম</label>
+                        </td>
+                        <td>
+                            <input name="Name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>পিতার নাম </label>
+                        </td>
+                        <td>
+                            <input name="FatherName" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>মাতার  নাম</label>
+                        </td>
+                        <td>
+                            <input name="MotherName" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>জেলা</label>
+                        </td>
+                        <td>
+                            <input name="District" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>শহর</label>
+                        </td>
+                        <td>
+                            <input name="City" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="btn-success" value="সাবমিট করুন" type="Submit"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                         @ViewData["Message"]
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            @{var data = ViewData["nid"];
+            if(data !=null){
+            <div class="text-center float-right">আপনার এন আইডি : @data
+            </div>
+                }
+            }
+        </div>
+    </div>
+</div>
